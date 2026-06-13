@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #ededed;
+  --bkg-component: #070707;
+  --bkg-border: #1a1a1a;
+}
+
+/* 1. ASEGÚRATE DE QUE EL NOMBRE DEL .TTF SEA IDÉNTICO AL DE TU CARPETA */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/Satoshi.ttf") format("truetype"); 
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/DMSans.ttf") format("truetype"); /* O DMSans-Regular.ttf si así se llama */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* En Tailwind v4 es mejor definirlas sin comillas en la variable */
+  --font-satoshi: Satoshi, sans-serif;
+  --font-dm: DM Sans, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Aquí aplicas la variable de Tailwind v4 */
+  font-family: var(--font-satoshi);
 }
