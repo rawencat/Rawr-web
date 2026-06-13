@@ -4,7 +4,6 @@ import { features } from "@/app/utils/features";
 export default function Features() {
     return (
             <div className="container mx-auto pt-32 pb-12 px-6 flex flex-col gap-12 relative z-10 " id="features">
-        {/* Texto de arriba: Centrado en móviles, alineado a la izquierda en escritorio */}
         <div className="text-center md:text-left flex flex-col items-center justify-center z-20 w-full">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-white">
             Why choose <span className="text-red-500">RAWR?</span>
@@ -16,7 +15,6 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Contenedor de Tarjetas: Grid limpio de 1 col en móvil y 2 cols desde tablets en adelante */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div
@@ -28,7 +26,6 @@ export default function Features() {
               }`}
             >
               <div className="w-full h-full flex flex-col justify-start items-start">
-                {/* Header: Icon & Upcoming Badge */}
                 <div className="w-full flex justify-between items-start mb-6">
                   <div
                     className={`p-3 rounded-xl border ${
@@ -40,7 +37,6 @@ export default function Features() {
                     {feature.icon}
                   </div>
 
-                  {/* Sleek 'Soon' Badge */}
                   {feature.upcoming && (
                     <span className="text-[10px] font-bold px-3 py-1.5 rounded-full bg-zinc-800/80 text-zinc-400 border border-zinc-700/50 uppercase tracking-widest backdrop-blur-md">
                       Soon
@@ -48,7 +44,6 @@ export default function Features() {
                   )}
                 </div>
 
-                {/* Card Content */}
                 <h3 className="text-xl font-bold mb-2 text-white">
                   {feature.title}
                 </h3>

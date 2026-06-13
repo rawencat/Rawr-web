@@ -13,12 +13,10 @@ export default function Navbar() {
     <nav className="bg-(--bkg-component)/80 backdrop-blur-md border border-(--bkg-border) fixed top-4 inset-x-0 mx-auto w-[90%]  text-white px-6 py-3.5 rounded-2xl z-50 shadow-xl shadow-black/20">
       <div className="w-full flex justify-between items-center">
         
-        {/* Logo con un toque de brillo rojo */}
         <div className="text-2xl font-black tracking-tighter text-white cursor-pointer select-none">
           RAWR
         </div>
 
-        {/* Links de Navegación + Botón de Acción */}
         <div className="flex items-center gap-6">
           <button
             onClick={() => scrollToSection("features")}
