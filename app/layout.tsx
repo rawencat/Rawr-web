@@ -14,7 +14,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "RAWR - Valorant Tracker",
-  description: "A valorant tracker ingame, with a focus on performance and user experience. with community features."
+  description: "A valorant tracker app, with a focus on performance and user experience. with community features.",
+  openGraph: {
+    title: "RAWR - Valorant Tracker",
+    description: "A valorant tracker ingame, with a focus on performance and user experience. with community features.",
+    url: "https://rawr.gg",
+    siteName: "RAWR",
+    images: [
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "RAWR - Valorant Tracker",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 export default function RootLayout({
   children,
